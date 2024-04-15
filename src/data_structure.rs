@@ -205,6 +205,14 @@ impl GridDescriptor {
             )),
         }
     }
+    pub fn add_suffix(name: String, suffix: u32) -> String {
+        const RECORD_SEPARATOR: char = '\u{001e}'; // ASCII "record separator"
+
+        let mut result = name.clone();
+        result.push(RECORD_SEPARATOR);
+        result.push_str(suffix.to_string().as_str());
+        result
+    }
 }
 
 #[derive(Debug, Default, Clone)]

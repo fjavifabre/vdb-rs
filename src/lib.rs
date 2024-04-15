@@ -4,5 +4,7 @@ mod data_structure;
 pub use data_structure::*;
 mod reader;
 pub use reader::*;
+mod writer;
+pub use writer::*;
 mod transform;
 pub use transform::*;
